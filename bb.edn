@@ -1,7 +1,5 @@
-{:deps {io.github.babashka/sci.nrepl {:git/url "https://github.com/babashka/sci.nrepl"
-                                      :git/sha "2f8a9ed2d39a1b09d2b4d34d95494b56468f4a23"}
-        io.github.babashka/http-server {:git/url "https://github.com/babashka/http-server"
-                                        :git/sha "8febc087c4098450e4bdecc135eece8015df03fc"}}
+{:deps {io.github.babashka/sci.nrepl {:mvn/version "0.0.2"}
+        org.babashka/http-server {:mvn/version "0.1.13"}}
  :tasks {http-server {:doc "Starts http server for serving static files"
                       :requires ([babashka.http-server :as http])
                       :task (do (http/serve {:port 8000 :dir "."})
